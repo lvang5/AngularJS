@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,14 @@
     <script src="./scripts/client.js"></script>
     <title>Angular JS</title>
 </head>
-<body>
+
+<body ng-app="FoodApp">
     <h1>Angular JS Activity</h1>
-    
+    <div ng-controller="FoodController as fm">
+    My favorite food is: <input type="text" ng-model="fm.food" placeholder="Favorite Food">
+    <button ng-click="fm.addFood()">Submit</button> 
+    <p>{{fm.food}}</p>
+    </div>
 </body>
+
 </html>
